@@ -1,0 +1,32 @@
+// @types/express(biblioteca) <- Geralmente onde fica a tipagem da biblioteca
+/**
+*GET    => Buscar uam informação
+*POST   => Inserir/criar uma informação
+*PUT    => Alterar uma informação
+*DELETE => Remover um dado
+*PATCH  => Alterar informação especifica
+*/
+// Primeiro parâmetro recurso
+app.get("/teste", (request, response) => {
+  // Request  => Entrando
+  // Response => Saindo
+  return response.send("Olá NLW");
+});
+
+app.post("/teste-post", (request, response) => {
+
+  return response.send("Olá NLW método post");
+});
+
+// http:localhost: 3000
+app.listen(3000, () => console.log('Server is running NLW'));
+
+/**
+ * Tipos de parâmetros
+ * Routes params => http://localhost:3000/pordutos/25623264646465
+ * Query params  => http://localhost:3000/pordutos?nome=teclado&descri=azul
+ * 
+ * Body Params => {
+ * "nome": "teclado"
+ * "descri": "azul"}
+ */
